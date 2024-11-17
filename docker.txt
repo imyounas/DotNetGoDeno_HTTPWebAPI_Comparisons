@@ -1,0 +1,15 @@
+aot:
+docker build -t dotnet9aotwebapi:dev .
+docker run --rm -dt -p 8585:8080 --name dotnet9aotwebapi --memory="1024m" --cpus="2" dotnet9aotwebapi:dev
+
+jit:
+docker build -t dotnet9jitwebapi:dev .
+docker run --rm -dt -p 7575:8080 --name dotnet9jitwebapi --memory="1024m" --cpus="2" dotnet9jitwebapi:dev
+
+go:
+docker build -t go123webapi:dev1 .
+docker run --rm -dt -p 6565:8080 --name go123webapi --memory="1024m" --cpus="2" go123webapi:dev1
+
+deno:
+docker build -t deno2webapi:dev .
+docker run --rm -dt -p 5555:9090 --name deno2webapi --memory="1024m" --cpus="2" deno2webapi:dev
